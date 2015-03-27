@@ -2107,7 +2107,7 @@ conda install statsmodels
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Anaconda comes 224 Python packages, including Networkx and SciKit-Learn!</em></p>
+<p><em>Anaconda comes with 224 packages, including Networkx and SciKit-Learn!</em></p>
 </div>
 </div>
 </div>
@@ -2302,7 +2302,7 @@ ipython notebook
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="adding-nodes">Adding nodes</h1>
-<p>In Python, <code>[o1, o2, etc.]</code> is used to group a <strong>list of unordered objects</strong></p>
+<p>In Python, <code>[o1, o2, etc.]</code> is used to group a <strong>mutable list of objects</strong></p>
 <p>Let&#39;s add a list of 3 nodes representing social network users Dave, Bob, and Alice</p>
 </div>
 </div>
@@ -2375,7 +2375,7 @@ Number of nodes is: 3
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="adding-edges">Adding edges</h1>
-<p>In Python, <code>(o1, o2, etc.)</code> is used to group a <strong>tuple of ordered objects</strong></p>
+<p>In Python, <code>(o1, o2, etc.)</code> is used to group an <strong>immutable tuple of objects</strong></p>
 <p>Let&#39;s add a list of two friendship tuples between Bob and Dave, and Bob and Alice </p>
 </div>
 </div>
@@ -2780,7 +2780,7 @@ Number of connected components is: 355
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Enable plotting in the current Notebook</span>
@@ -4361,7 +4361,7 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Useful file pattern package</span>
@@ -4391,7 +4391,7 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Open files and merge data</span>
@@ -4431,7 +4431,7 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="k">print</span> <span class="s">&quot;Number of names:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
@@ -4484,7 +4484,7 @@ Its female count: 18
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Compute ratio of unisex names in dataset</span>
@@ -4549,7 +4549,7 @@ $$</p>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Assign labels to names in dataset</span>
@@ -4603,7 +4603,7 @@ Ratio is dataset: 63.47%
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="n">name</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">100</span><span class="p">]</span>
@@ -4692,7 +4692,7 @@ Its gender is: Male
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Extract features from names</span>
@@ -4725,7 +4725,7 @@ Its gender is: Male
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="n">name</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">100</span><span class="p">]</span>
@@ -4799,7 +4799,7 @@ Label is: 0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Dictionary vectorizer from SciKit-Learn package</span>
@@ -4829,7 +4829,7 @@ Label is: 0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Get feature names and label index</span>
@@ -4876,10 +4876,11 @@ Number of features: 468
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Split labelled vectors into labels and vectors</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">labelled_vectors</span><span class="p">[:,</span><span class="n">label_index</span><span class="p">]</span>
 <span class="n">vectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">labelled_vectors</span><span class="p">,</span> <span class="p">[</span><span class="n">label_index</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">vectors</span>
@@ -4927,7 +4928,7 @@ Number of features: 468
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Validate dimensions</span>
@@ -5069,7 +5070,7 @@ $$</p>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Import shuffle method</span>
@@ -5100,7 +5101,7 @@ $$</p>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Split data</span>
@@ -5132,7 +5133,7 @@ $$</p>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="k">assert</span> <span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
@@ -5182,7 +5183,7 @@ Data split successfully!
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Import the classifier</span>
@@ -5235,7 +5236,7 @@ BernoulliNB(alpha=1.0, binarize=0.0, class_prior=None, fit_prior=True)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>How well is the classifier?</em></p>
+<p><em>How accurate is the classifier?</em></p>
 </div>
 </div>
 </div>
@@ -5254,7 +5255,7 @@ BernoulliNB(alpha=1.0, binarize=0.0, class_prior=None, fit_prior=True)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Predict labels of unseen data</span>
@@ -5281,7 +5282,7 @@ BernoulliNB(alpha=1.0, binarize=0.0, class_prior=None, fit_prior=True)
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Import testing metrics</span>
@@ -5333,7 +5334,7 @@ Classifier accuracy: 0.800647948164
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Import testing metrics</span>
@@ -5493,14 +5494,14 @@ XmPlS1lOFmaWxfeGmFkWJwszy+JkYWZZnCzMLIuThZll+X8ldHaoL+7xowAAAABJRU5ErkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># Import helper function from utils</span>
 <span class="kn">import</span> <span class="nn">utils</span>
 
 <span class="c"># Get feature vector from name</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Alexa&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Christian&quot;</span>
 <span class="n">vector</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_vector</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">,</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
 <span class="c"># Predict whether name is female</span>
@@ -5518,7 +5519,7 @@ XmPlS1lOFmaWxfeGmFkWJwszy+JkYWZZnCzMLIuThZll+X8ldHaoL+7xowAAAABJRU5ErkJggg==
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-Classifier says Alexa is a female
+Classifier says Christian is a male
 
 </pre>
 </div>
