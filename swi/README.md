@@ -2,7 +2,7 @@
 
 This notebook started as a companion to the [SFU/UBC Digital Salon Workshop on Social Web Intelligence](https://www.sfu.ca/fass/events/sfu-ubc-digital-salon-workshop-on-social-web-intelligence.html), and has been growning ever since.
 
-To view the notebook, please click [here](http://nbviewer.ipython.org/github/boshmaf/notebooks/swi/blob/master/swi.ipynb). 
+To view the notebook, please click [here](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/swi/swi.ipynb). 
 
 Note that the notebook is designed as a presentation, so if you would like to view it properly please follow the instructions in the link above.
 
