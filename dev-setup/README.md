@@ -10,6 +10,6 @@ Note that the notebook is designed as a presentation, so if you would like to vi
 
 The goal of this notebook is to set up a Python developement environment on your computer. You only need to this once in order to play all notebooks, starting with this one. This is the "preliminary" notebook.
 
-# Estimated time to complete
+# Estimated time to finish
 
 15--30 minutes, depending on download speed :)
