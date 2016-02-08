@@ -1,15 +1,9 @@
-# Social Web Intelligence (swi)
+# Graph-Analysis
 
-This notebook started as a companion to the [SFU/UBC Digital Salon Workshop on Social Web Intelligence](http://digitalsalon.arts.ubc.ca/events/event/social-web-intelligence/), and has been growning ever since.
+You will learn the basics of graph analysis. This is one of pillars of Data and Network Science. Graphs are useful mathematical models of entities and their relationships. This tutorial uses social networks as one application of graph analysis, and it introduces topics such as connectivity, centrality, and visualization.
 
-To view the notebook, please click [here](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/swi/swi.ipynb). 
+**Estimated time to finish: 30-45 minutes.**
 
-Note that the notebook is designed as a presentation, so if you would like to view it properly please follow the instructions in the link above.
+To **read** the notebook, please click [here](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/graph-analysis/notebook.ipynb). 
 
-# What you will learn
-
-The goal of this notebook is to introduce the theory and practice of basic concepts in network analysis, machine learning, and data mining in order to make sense of the social and information networks that have been fuelled and rendered accessible by the Internet.
-
-By going through the content, you will learn about the structure and evolution of networks, drawing on knowledge from disciplines as diverse as sociology, mathematics, statistics, computer science, economics, and physics.
-
-Interactive demonstrations and hands-on analysis of real-world data sets will focus on a range of tasks: from online network data collection, to identifying important nodes in the network, to detecting communities, to opinion mining and sentiment analysis, to predicting future relationships and social attributes.
+To **present** the notebook, click over [here](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/graph-analysis/notebook.ipynb).
