@@ -1,7 +1,5 @@
 # Dev-Setup
 
-## Outline
-
 You will set up a Python developement environment on your computer. You only need to do this once in order to play all notebooks, starting with this one. This is the "preliminary" notebook.
 
 Estimated time to finish: 15-30 minutes.
