@@ -12,4 +12,4 @@ The goal of this notebook is to set up a Python developement environment on your
 
 # Estimated time to finish
 
-15--30 minutes, depending on download speed :)
+From 15 to 30 minutes, depending on download speed :)
