@@ -1,6 +1,6 @@
 # Graph-Analysis
 
-You will learn the basics of graph analysis. This is one of pillars of Data and Network Science. Graphs are useful mathematical models of entities and their relationships. This tutorial uses social networks as one application of graph analysis, and it introduces topics such as connectivity, centrality, and visualization.
+You will learn the basics of graph analysis, which is an essential topic in Data and Network Sciences. In concept, a graph represents a useful mathematical model consisting of entities (nodes) and relationships between these entities (edges connecting nodes). This tutorial uses social networks as one application of graph analysis, and introduces concepts such as connectivity, centrality, and visualization of networks.
 
 **Estimated time to finish: 30-45 minutes.**
 
