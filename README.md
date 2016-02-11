@@ -16,5 +16,3 @@ Exploring properties of connected entities and their relationships.
 ## [Social Web Intelligence (SWI)](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/swi/swi.ipynb)
 
 Learn how to use free tools and data to answer meaningful questions about user behavior.
-
-ENJOY :)
