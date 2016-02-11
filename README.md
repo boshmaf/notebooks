@@ -3,7 +3,7 @@ A collections of hands-on tutorials on interesting, multi-disciplinary topics in
 
 Have been here before? Go straight to Jupyter [index](http://nbviewer.jupyter.org/github/boshmaf/notebooks/tree/master).
 
-## [Seeting up a Python Development Environment](https://github.com/boshmaf/notebooks/tree/master/dev-setup)
+## [Setting up a Python Development Environment](https://github.com/boshmaf/notebooks/tree/master/dev-setup)
 
 [ [Read](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/dev-setup/notebook.ipynb) |  [Present](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/dev-setup/notebook.ipynb) ]
 This is the tutorial to start them all.
