@@ -1,4 +1,4 @@
-# Notebooks
+# [Notebooks](http://boshmaf.github.io/notebooks)
 A collections of hands-on tutorials on interesting, multi-disciplinary topics in computer technology.
 
 Have been here before? Go straight to Jupyter [index](http://nbviewer.jupyter.org/github/boshmaf/notebooks/tree/master).
