@@ -6,5 +6,5 @@ def randname(length=4):
 
 def html(content):
     nspace = randname()
-    toggle_html = '<div style="width: auto;"><a id="js_code_'+nspace+'" href="#" style="display: block; background: rgb(200, 200, 200);">Show Code</a><script>$(document).ready(function(){ var toggleButton = $("#js_code_'+nspace+'"); var codeDiv = toggleButton.closest(".output_wrapper").prevAll(); toggleButton.on("click", function(){ codeDiv.toggle(); $("body").scrollTo("#js_code_'+nspace+'");  });   codeDiv.hide();   });  </script>'
+    toggle_html = '<div style="width: auto;"><a id="nb_embed_'+nspace+'" href="#nb_embed_'+nspace+'" style="display: block; background: rgb(200, 200, 200);">Show Code</a><script>$(document).ready(function(){ var toggleButton = $("#nb_embed_'+nspace+'"); var codeDiv = toggleButton.closest(".output_wrapper").prevAll(); toggleButton.on("click", function(){ codeDiv.toggle(); $("body").scrollTo("#nb_embed_'+nspace+'");  });   codeDiv.hide();   });  </script>'
     return HTML(toggle_html + '<div style="width: auto; border: 1px solid rgb(200, 200, 200); padding: 1em;">'+content+'</div></div>' )
