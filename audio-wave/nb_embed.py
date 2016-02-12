@@ -5,11 +5,11 @@ def html(content):
         <script>
         $(document).ready(function(){
            var toggleButton = $('#js_code_01')
-           var codeDiv = toggleButton.closest('.output_wrapper').prevAll()[1];
+           var codeDiv = toggleButton.closest('.output_wrapper').prevAll();
            toggleButton.on('click', function(){
-              $(codeDiv).toggle();
+              codeDiv.toggle();
            });
-           $(codeDiv).hide();
+           codeDiv.hide();
         });
         </script>'''
     return HTML(toggle_html + '<div style="width: auto; border: 1px solid rgb(200, 200, 200); padding: 1em;">'+content+'</div></div>' )
