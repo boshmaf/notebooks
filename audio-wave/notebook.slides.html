@@ -249,7 +249,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exploring-Sound-Generation-with-Python-wave-module">Exploring Sound Generation with Python wave module<a class="anchor-link" href="#Exploring-Sound-Generation-with-Python-wave-module">&#182;</a></h2><p>Have you ever wondered how a computer is able to play a sound file or how we are able to record and store sounds?
+<h2 id="Exploring-Sound-Generation-with-Python-wave-module">Exploring Sound Generation with Python wave module<a class="anchor-link" href="#Exploring-Sound-Generation-with-Python-wave-module">&#182;</a></h2><p>Have you ever wondered how a computer is able to play a sound file or how we are able to record and store sound?
 How does a sequence of zeroes and ones get converted into physical sound that come out through the speakers?
 How are all these real-life analogue sound saved as zeroes and ones?</p>
 <p>In this notebook, we will explore the physics of sound and how the information is stored digitally inside a raw WAV file.</p>
@@ -279,7 +279,7 @@ How are all these real-life analogue sound saved as zeroes and ones?</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">wave</span>
@@ -306,7 +306,7 @@ How are all these real-life analogue sound saved as zeroes and ones?</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">struct</span>
@@ -329,7 +329,7 @@ How are all these real-life analogue sound saved as zeroes and ones?</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">wav_file</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;output/myNoise.wav&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
@@ -363,45 +363,34 @@ How are all these real-life analogue sound saved as zeroes and ones?</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">FRAMERATE</span> <span class="o">=</span> <span class="mi">44100</span>
-<span class="n">wave_file</span><span class="o">.</span><span class="n">setparams</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">FRAMERATE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;NONE&#39;</span><span class="p">,</span> <span class="s">&#39;not compressed&#39;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c">#Python 3</span>
-<span class="kn">import</span> <span class="nn">wave</span><span class="o">,</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">struct</span>
-
-<span class="n">FRAMERATE</span> <span class="o">=</span> <span class="mi">44100</span>
-<span class="n">SOUND_LENGTH</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="n">wav_file</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;output/myNoise.wav&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
 <span class="n">wav_file</span><span class="o">.</span><span class="n">setparams</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">FRAMERATE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;NONE&#39;</span><span class="p">,</span> <span class="s">&#39;not compressed&#39;</span><span class="p">))</span>
+</pre></div>
 
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next we will create the bytes representing the white noise.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">SOUND_LENGTH</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">bits</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">FRAMERATE</span> <span class="o">*</span> <span class="n">SOUND_LENGTH</span><span class="p">)):</span>
     <span class="n">bit</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">20000</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
@@ -409,7 +398,29 @@ How are all these real-life analogue sound saved as zeroes and ones?</p>
     <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packed_bit</span><span class="p">)</span>
     <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packed_bit</span><span class="p">)</span>
 <span class="n">bits</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">bits</span><span class="p">))</span>
-<span class="n">wav_file</span><span class="o">.</span><span class="n">writeframes</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we write these bytes into the file, and close the file to complete the process.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">wav_file</span><span class="o">.</span><span class="n">writeframes</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span>
 <span class="n">wav_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
@@ -469,13 +480,15 @@ wav_file.close()</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-Representing-a-note">4. Representing a note<a class="anchor-link" href="#4.-Representing-a-note">&#182;</a></h3>
+<h3 id="4.-Representing-a-note">4. Representing a note<a class="anchor-link" href="#4.-Representing-a-note">&#182;</a></h3><p>For generating white noise, we selected a random integer between -20000 and 20000 at each frame.
+To generate a note at a certain pitch, we need to store the soundwave's value at each frame.</p>
+
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c">#Python 3</span>
@@ -483,11 +496,32 @@ wav_file.close()</code></pre>
 
 <span class="n">FRAMERATE</span> <span class="o">=</span> <span class="mi">44100</span>
 <span class="n">SOUND_LENGTH</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">WAVELENGTH</span> <span class="o">=</span> <span class="n">FRAMERATE</span> <span class="o">/</span> <span class="mi">440</span>
 
 <span class="n">wav_file</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;output/myNote.wav&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
 <span class="n">wav_file</span><span class="o">.</span><span class="n">setparams</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">FRAMERATE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;NONE&#39;</span><span class="p">,</span> <span class="s">&#39;not compressed&#39;</span><span class="p">))</span>
+</pre></div>
 
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Middle A has a frequency of 440 hz, so the "wavelength" in frames is equal to 1 sec * 44100 frames/sec / 440.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">WAVELENGTH</span> <span class="o">=</span> <span class="n">FRAMERATE</span> <span class="o">/</span> <span class="mi">440</span>
 <span class="n">bits</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">FRAMERATE</span> <span class="o">*</span> <span class="n">SOUND_LENGTH</span><span class="p">)):</span>
     <span class="n">bit</span> <span class="o">=</span> <span class="mi">5000</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">WAVELENGTH</span><span class="p">)</span> <span class="p">)</span>
@@ -509,13 +543,42 @@ wav_file.close()</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>#Python 3
+import wave, random, struct, math
+
+FRAMERATE = 44100
+SOUND_LENGTH = 5
+WAVELENGTH = FRAMERATE / 440
+
+wav_file = wave.open('output/myNote.wav', 'w')
+wav_file.setparams((2, 2, FRAMERATE, 0, 'NONE', 'not compressed'))
+
+bits = []
+for i in range(0, round(FRAMERATE * SOUND_LENGTH)):
+    bit = 5000 * math.sin( i * (2 * math.pi / WAVELENGTH) )
+    packed_bit = struct.pack('h', round(bit))
+    bits.append(packed_bit)
+    bits.append(packed_bit)
+bits = (b''.join(bits))
+wav_file.writeframes(bits)
+wav_file.close()</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="5.-Representing-a-melody">5. Representing a melody<a class="anchor-link" href="#5.-Representing-a-melody">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">class</span> <span class="nc">Note</span><span class="p">():</span>
@@ -542,7 +605,7 @@ wav_file.close()</code></pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">class</span> <span class="nc">Sequence</span><span class="p">():</span>
@@ -575,7 +638,7 @@ wav_file.close()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">doremi</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">()</span>
@@ -601,7 +664,7 @@ wav_file.close()</code></pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">sound</span>
@@ -625,19 +688,6 @@ wav_file.close()</code></pre>
 <span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;D4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;C4&#39;</span><span class="p">,</span> <span class="n">b</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">twinkle</span><span class="o">.</span><span class="n">writeWav</span><span class="p">(</span><span class="s">&#39;output/twinkle&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
 </pre></div>
 
 </div>
