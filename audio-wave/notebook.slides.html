@@ -249,7 +249,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exploring-Sound-Generation-with-Python-wave-module">Exploring Sound Generation with Python wave module<a class="anchor-link" href="#Exploring-Sound-Generation-with-Python-wave-module">&#182;</a></h2><p>Have you ever stopped and wondered how a computer is able to play a sound file or how we are able to record and store sounds?
+<h2 id="Exploring-Sound-Generation-with-Python-wave-module">Exploring Sound Generation with Python wave module<a class="anchor-link" href="#Exploring-Sound-Generation-with-Python-wave-module">&#182;</a></h2><p>Have you ever wondered how a computer is able to play a sound file or how we are able to record and store sounds?
 How does a sequence of zeroes and ones get converted into physical sound that come out through the speakers?
 How are all these real-life analogue sound saved as zeroes and ones?</p>
 <p>In this notebook, we will explore the physics of sound and how the information is stored digitally inside a raw WAV file.</p>
@@ -270,8 +270,178 @@ How are all these real-life analogue sound saved as zeroes and ones?</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-Writing-a-WAV-file">1. Writing a WAV file<a class="anchor-link" href="#1.-Writing-a-WAV-file">&#182;</a></h3><p>In this notebook, we will be using a standard Python module called <em>wave</em> that provides basic file writing and reading functionalities.
-You can also read a <a href="http://soledadpenades.com/2009/10/29/fastest-way-to-generate-wav-files-in-python-using-the-wave-module/">good introduction to generating wave files</a> written by <a href="https://github.com/sole">Soledad Penades</a></p>
+<h3 id="1.-Writing-a-WAV-file">1. Writing a WAV file<a class="anchor-link" href="#1.-Writing-a-WAV-file">&#182;</a></h3><p>In this notebook, we will be using a standard Python module called <em>wave</em> that provides basic file writing and reading functionalities. First we will generate a WAV file with 10 seconds of white noise, just to see how the wave module works.</p>
+<p>You can also read <a href="http://soledadpenades.com/2009/10/29/fastest-way-to-generate-wav-files-in-python-using-the-wave-module/">this great article</a> on generating wave files written by <a href="https://github.com/sole">Soledad Penades</a></p>
+<p>Let's start by importing the <em>wave</em> module</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">wave</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will also import:</p>
+<ul>
+<li><em>random</em> module for generating random bits for the random noise</li>
+<li><em>struct</em> module for manipulating bytes</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">struct</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can use the wave module to create an instance of the file that we will be writing.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">wav_file</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;output/myNoise.wav&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>According to the <a href="https://hg.python.org/cpython/file/3.5/Lib/wave.py">documentation</a> for the wave module, "You should set the parameters before the first writeframesraw or writeframes."</p>
+<p>To set the parameters, we will call the <a href="https://docs.python.org/3/library/wave.html#wave.Wave_write.setparams">setparams((nchannels, sampwidth, framerate, nframes, comptype, compname))</a> method on the <em>wav_file</em> instance.</p>
+<p>The parameters will be:</p>
+<ul>
+<li>nchannels (number of audio channels) : 2    #for stereo</li>
+<li>sampwidth (number of bytes per audio sample) : 2</li>
+<li>framerate (number of samples per second) : 44100</li>
+<li>nframes (the number of audio frames written to the header) : 0    #seekable output stream</li>
+<li>comptype (compression type) : 'NONE'                              #raw</li>
+<li>compname (human-readable compression type) : 'not compressed'     #raw</li>
+</ul>
+<p>We will be reusing the value for framerate, so we can assign a name to it.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">FRAMERATE</span> <span class="o">=</span> <span class="mi">44100</span>
+<span class="n">wave_file</span><span class="o">.</span><span class="n">setparams</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">FRAMERATE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;NONE&#39;</span><span class="p">,</span> <span class="s">&#39;not compressed&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c">#Python 3</span>
+<span class="kn">import</span> <span class="nn">wave</span><span class="o">,</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">struct</span>
+
+<span class="n">FRAMERATE</span> <span class="o">=</span> <span class="mi">44100</span>
+<span class="n">SOUND_LENGTH</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">wav_file</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;output/myNoise.wav&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">wav_file</span><span class="o">.</span><span class="n">setparams</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">FRAMERATE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;NONE&#39;</span><span class="p">,</span> <span class="s">&#39;not compressed&#39;</span><span class="p">))</span>
+
+<span class="n">bits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">FRAMERATE</span> <span class="o">*</span> <span class="n">SOUND_LENGTH</span><span class="p">)):</span>
+    <span class="n">bit</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">20000</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+    <span class="n">packed_bit</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s">&#39;h&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">bit</span><span class="p">))</span>
+    <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packed_bit</span><span class="p">)</span>
+    <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packed_bit</span><span class="p">)</span>
+<span class="n">bits</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">bits</span><span class="p">))</span>
+<span class="n">wav_file</span><span class="o">.</span><span class="n">writeframes</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span>
+<span class="n">wav_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following is the entire script for this section:</p>
+
+<pre><code>import wave, random, struct
+
+FRAMERATE = 44100
+SOUND_LENGTH = 10
+
+wav_file = wave.open('output/myNoise.wav', 'w')
+wav_file.setparams((2, 2, FRAMERATE, 0, 'NONE', 'not compressed'))
+
+bits = []
+for i in range(0, round(FRAMERATE * SOUND_LENGTH)):
+    bit = random.randint(-20000, 20000)
+    packed_bit = struct.pack('h', round(bit))
+    bits.append(packed_bit)
+    bits.append(packed_bit)
+bits = (b''.join(bits))
+wav_file.writeframes(bits)
+wav_file.close()</code></pre>
 
 </div>
 </div>
@@ -302,7 +472,38 @@ You can also read a <a href="http://soledadpenades.com/2009/10/29/fastest-way-to
 <h3 id="4.-Representing-a-note">4. Representing a note<a class="anchor-link" href="#4.-Representing-a-note">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c">#Python 3</span>
+<span class="kn">import</span> <span class="nn">wave</span><span class="o">,</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">struct</span><span class="o">,</span> <span class="nn">math</span>
+
+<span class="n">FRAMERATE</span> <span class="o">=</span> <span class="mi">44100</span>
+<span class="n">SOUND_LENGTH</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">WAVELENGTH</span> <span class="o">=</span> <span class="n">FRAMERATE</span> <span class="o">/</span> <span class="mi">440</span>
+
+<span class="n">wav_file</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;output/myNote.wav&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">wav_file</span><span class="o">.</span><span class="n">setparams</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">FRAMERATE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;NONE&#39;</span><span class="p">,</span> <span class="s">&#39;not compressed&#39;</span><span class="p">))</span>
+
+<span class="n">bits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">FRAMERATE</span> <span class="o">*</span> <span class="n">SOUND_LENGTH</span><span class="p">)):</span>
+    <span class="n">bit</span> <span class="o">=</span> <span class="mi">5000</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">WAVELENGTH</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">packed_bit</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s">&#39;h&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">bit</span><span class="p">))</span>
+    <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packed_bit</span><span class="p">)</span>
+    <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packed_bit</span><span class="p">)</span>
+<span class="n">bits</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">bits</span><span class="p">))</span>
+<span class="n">wav_file</span><span class="o">.</span><span class="n">writeframes</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span>
+<span class="n">wav_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -311,7 +512,84 @@ You can also read a <a href="http://soledadpenades.com/2009/10/29/fastest-way-to
 <h3 id="5.-Representing-a-melody">5. Representing a melody<a class="anchor-link" href="#5.-Representing-a-melody">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">class</span> <span class="nc">Note</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="mi">440</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frequency</span> <span class="o">=</span> <span class="n">frequency</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wavelength</span> <span class="o">=</span> <span class="n">FRAMERATE</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">frequency</span>
+    
+    <span class="k">def</span> <span class="nf">toBytes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">bits</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">*</span> <span class="n">FRAMERATE</span><span class="p">)):</span>
+            <span class="n">bit</span> <span class="o">=</span> <span class="mi">5000</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">wavelength</span><span class="p">)</span> <span class="p">)</span>
+            <span class="n">packed_bit</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s">&#39;h&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">bit</span><span class="p">))</span>
+            <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packed_bit</span><span class="p">)</span>
+            <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packed_bit</span><span class="p">)</span>
+        <span class="n">bits</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">bits</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">bits</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">class</span> <span class="nc">Sequence</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">note</span><span class="p">)</span> <span class="o">==</span> <span class="n">Note</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&#39;Should be a Note object&#39;</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">addNote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    
+    <span class="k">def</span> <span class="nf">writeWav</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="n">wav_file</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
+        <span class="n">wav_file</span><span class="o">.</span><span class="n">setparams</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">FRAMERATE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;NONE&#39;</span><span class="p">,</span> <span class="s">&#39;not compressed&#39;</span><span class="p">))</span>
+        <span class="n">bits</span> <span class="o">=</span> <span class="n">b</span><span class="s">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">:</span>
+            <span class="n">bits</span> <span class="o">+=</span> <span class="n">note</span><span class="o">.</span><span class="n">toBytes</span><span class="p">()</span>
+        <span class="n">wav_file</span><span class="o">.</span><span class="n">writeframes</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span>
+        <span class="n">wav_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">doremi</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">()</span>
+<span class="n">doremi</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="mf">261.626</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">doremi</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="mf">293.665</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">doremi</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="mf">329.628</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">doremi</span><span class="o">.</span><span class="n">writeWav</span><span class="p">(</span><span class="s">&#39;output/myMelody.wav&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -320,6 +598,39 @@ You can also read a <a href="http://soledadpenades.com/2009/10/29/fastest-way-to
 <h3 id="6.-Writing-a-simple-song-and-saving-as-a-WAV">6. Writing a simple song and saving as a WAV<a class="anchor-link" href="#6.-Writing-a-simple-song-and-saving-as-a-WAV">&#182;</a></h3>
 </div>
 </div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">sound</span>
+
+<span class="n">BPM</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">/</span> <span class="n">BPM</span>
+
+<span class="n">twinkle</span> <span class="o">=</span> <span class="n">sound</span><span class="o">.</span><span class="n">Sequence</span><span class="p">()</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;C4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;C4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;G4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;G4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;A5&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;A5&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;G4&#39;</span><span class="p">,</span> <span class="n">b</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;F4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;F4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;E4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;E4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;D4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;D4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;C4&#39;</span><span class="p">,</span> <span class="n">b</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">twinkle</span><span class="o">.</span><span class="n">writeWav</span><span class="p">(</span><span class="s">&#39;output/twinkle&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -333,7 +644,20 @@ You can also read a <a href="http://soledadpenades.com/2009/10/29/fastest-way-to
 </div>
 </div>
 
-</div></section></section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section>
 </div>
 </div>
 
