@@ -249,12 +249,18 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Setting-Up-a-Python-Development-Environment">Setting Up a Python Development Environment<a class="anchor-link" href="#Setting-Up-a-Python-Development-Environment">&#182;</a></h1><p><em>The first tutorial to start them all</em></p>
-<p><br/>
-Yazan Boshmaf</p>
-<p><br/>
-More notebooks? Go to <a href="https://github.com/boshmaf/notebooks">github.com/boshmaf/notebooks</a></p>
-<p>Last updated: February 7, 2015</p>
+<h2 id="Exploring-Sound-Generation-with-Python-wave-module">Exploring Sound Generation with Python wave module<a class="anchor-link" href="#Exploring-Sound-Generation-with-Python-wave-module">&#182;</a></h2><p>Have you ever stopped and wondered how a computer is able to play a sound file or how we are able to record and store sounds?
+How does a sequence of zeroes and ones get converted into physical sound that come out through the speakers?
+How are all these real-life analogue sound saved as zeroes and ones?</p>
+<p>In this notebook, we will explore the physics of sound and how the information is stored digitally inside a raw WAV file.</p>
+<ol>
+<li>Writing a WAV file</li>
+<li>Understanding the data format</li>
+<li>Physics of sound</li>
+<li>Representing a note</li>
+<li>Representing a melody</li>
+<li>Writing a simple song and saving as a WAV</li>
+</ol>
 
 </div>
 </div>
@@ -264,139 +270,69 @@ More notebooks? Go to <a href="https://github.com/boshmaf/notebooks">github.com/
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Outline">Outline<a class="anchor-link" href="#Outline">&#182;</a></h1><p>You will download, install, and run some tools</p>
-<p>These tools allow you to develop in Python 2.7</p>
-<p>Also, you get to learn how to write Jupyter/IPython notebooks like this one!</p>
+<h3 id="1.-Writing-a-WAV-file">1. Writing a WAV file<a class="anchor-link" href="#1.-Writing-a-WAV-file">&#182;</a></h3><p>In this notebook, we will be using a standard Python module called <em>wave</em> that provides basic file writing and reading functionalities.
+You can also read a <a href="http://soledadpenades.com/2009/10/29/fastest-way-to-generate-wav-files-in-python-using-the-wave-module/">good introduction to generating wave files</a> written by <a href="https://github.com/sole">Soledad Penades</a></p>
 
 </div>
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>I assume your developement platform/OS is Unix-based. Mine is OS X (Apple Mac).</em></p>
-<p><em>My command-line interpreter (a.k.a. shell) is Bash. Use it, and you will save time!</em></p>
-
+<h3 id="2.-Understanding-the-data-format">2. Understanding the data format<a class="anchor-link" href="#2.-Understanding-the-data-format">&#182;</a></h3>
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installing-Anaconda-Python-distribution">Installing Anaconda Python distribution<a class="anchor-link" href="#Installing-Anaconda-Python-distribution">&#182;</a></h1><p>Go to Continuum Anaconda webpage <a href="http://continuum.io/downloads">continuum.io/downloads</a></p>
-<p>Download &amp; install the propoer binary of Python 2.7 Graphical Installer</p>
-<p>Update Anaconda, Jupyter, and IPython</p>
-<ul>
-<li><p>Use Anaconda Launcher graphical interface (see desktop shortcut)</p>
-</li>
-<li><p>Or from command-line, type</p>
-
-<pre><code>conda update conda jupyter ipython</code></pre>
-</li>
-</ul>
-
+<h3 id="3.-Physics-of-sound">3. Physics of sound<a class="anchor-link" href="#3.-Physics-of-sound">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Anaconda supports 400 Python packages, including Jupyter and IPyhon!</em></p>
-
+<h3 id="4.-Representing-a-note">4. Representing a note<a class="anchor-link" href="#4.-Representing-a-note">&#182;</a></h3>
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installing-Git-version-control-system">Installing Git version control system<a class="anchor-link" href="#Installing-Git-version-control-system">&#182;</a></h1><p>Go to Git website <a href="http://git-scm.com/downloads">git-scm.com/downloads</a></p>
-<p>Download and install the proper binary of Git</p>
-<p>Clone the notebooks repository from Github using command-line</p>
-
-<pre><code>cd ~/
-mkdir dev
-cd dev
-git clone https://github.com/boshmaf/notebooks.git</code></pre>
-
+<h3 id="5.-Representing-a-melody">5. Representing a melody<a class="anchor-link" href="#5.-Representing-a-melody">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Repository contains this and all other playbooks!</em></p>
-
+<h3 id="6.-Writing-a-simple-song-and-saving-as-a-WAV">6. Writing a simple song and saving as a WAV<a class="anchor-link" href="#6.-Writing-a-simple-song-and-saving-as-a-WAV">&#182;</a></h3>
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Install-PanDoc-document-convertor">Install PanDoc document convertor<a class="anchor-link" href="#Install-PanDoc-document-convertor">&#182;</a></h1><p>Got to PanDoc website <a href="http://pandoc.org/installing.html">pandoc.org/installing.html</a></p>
-<p>Download and install the proper binary of PanDoc</p>
-<p>To view these slides from command-line, type</p>
-
-<pre><code>cd ~/dev/notebooks/dev-setup
-bash start.sh</code></pre>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
+</pre></div>
 
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>This will open a new tab in the browser. Use arrow keys to navigate</em></p>
 
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="You-can-now-edit-these-slides!">You can now edit these slides!<a class="anchor-link" href="#You-can-now-edit-these-slides!">&#182;</a></h1><p>From command-line, type</p>
-
-<pre><code>cd ~/dev/notebooks/dev-setup
-jupyter notebook</code></pre>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>This will open a new tab in the browser. Click on <code>notebook.ipynb</code> to edit the slides</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Questions?-Issues?">Questions? Issues?<a class="anchor-link" href="#Questions?-Issues?">&#182;</a></h1><p>Tweet your question to <a href="https://twitter.com/boshmaf">twitter.com/boshmaf</a> and I'll get back to you</p>
-<p>Best way to fix any issue is to open one at <a href="https://github.com/boshmaf/notebooks">github.com/boshmaf/notebooks</a></p>
-
-</div>
-</div>
 </div></section></section>
 </div>
 </div>
