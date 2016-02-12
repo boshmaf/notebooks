@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>swi slides</title>
+<title>notebook slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -252,2254 +252,12 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Social-Web-Intelligence">Social Web Intelligence<a class="anchor-link" href="#Social-Web-Intelligence">&#182;</a></h1><p><em>Analyzing and learning from users and their relationships</em></p>
+<h1 id="Machine-Learning-with-SciKit-Learn">Machine Learning with SciKit-Learn<a class="anchor-link" href="#Machine-Learning-with-SciKit-Learn">&#182;</a></h1><p><em>Training a machine to classify things into categories with high accuracy</em></p>
 <p><br/>
-Yazan Boshmaf, UBC</p>
+Yazan Boshmaf</p>
 <p><br/>
-SFU/UBC Digital Salon's 2nd Digital Humanities Workshop</p>
-<p>February 21, 2015</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Preliminaries">Preliminaries<a class="anchor-link" href="#Preliminaries">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="About-the-presenter">About the presenter<a class="anchor-link" href="#About-the-presenter">&#182;</a></h1><p>PhD candidate at UBC</p>
-<p>Deisgn and analyze social bots as an academic</p>
-<p>Build systems to fight the bad guys on the social web</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Feel free to contacts me at <a href="mailto:boshmaf@ece.ubc.ca">boshmaf@ece.ubc.ca</a></em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="About-the-slides">About the slides<a class="anchor-link" href="#About-the-slides">&#182;</a></h1><p>Created using Jupyter Notebook (was IPython)</p>
-<p>Available to everyone</p>
-<p>May have typos, errors, etc.</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Copy or contribute at <a href="http://boshmaf.github.io/swi/">http://boshmaf.github.io/swi</a></em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="About-the-workshop">About the workshop<a class="anchor-link" href="#About-the-workshop">&#182;</a></h1><p>SFU/UBC Digital Salon's Workshop Series</p>
-<p>Organized by Siobhan McElduff (<a href="mailto:siobhan.mcelduff@ubc.ca">siobhan.mcelduff@ubc.ca</a>)</p>
-<p>Theory and practice of network analysis &amp; machine learning</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Applied to social networking problems with hands-on experience using Python</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<table>
-<thead><tr>
-<th>Timeslot</th>
-<th>Subject</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>10:00 - 11:00</td>
-<td>Introduction</td>
-</tr>
-<tr>
-<td><strong>11:00 - 11:15</strong></td>
-<td><strong>Break I</strong></td>
-</tr>
-<tr>
-<td>11:15 - 13:15</td>
-<td>Network analysis with Networkx</td>
-</tr>
-<tr>
-<td><strong>13:15 - 13:30</strong></td>
-<td><strong>Break II</strong></td>
-</tr>
-<tr>
-<td>13:30 - 15:30</td>
-<td>Machine learning with SciKit-Learn</td>
-</tr>
-<tr>
-<td><strong>15:30 - 15:45</strong></td>
-<td><strong>Break III</strong></td>
-</tr>
-<tr>
-<td>15:45 - 16:00</td>
-<td>Final remarks</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Social-networks-are-everywhere">Social networks are everywhere<a class="anchor-link" href="#Social-networks-are-everywhere">&#182;</a></h1><p>Model friendships, followships, professional relationships, etc.</p>
-<p>Explicitly declared on the web using <strong>online social networks</strong> (OSNs)</p>
-<ul>
-<li><p>Facebook with <strong>1.4B</strong> montly active users [<a href="http://newsroom.fb.com/company-info/" title="Facebook company info">1</a>]</p>
-</li>
-<li><p>Twitter with <strong>288M</strong> montly active users [<a href="https://about.twitter.com/company" title="Twitter company info">2</a>]</p>
-</li>
-<li><p>LinkedIn with <strong>347M</strong> registered users [<a href="https://press.linkedin.com/about-linkedin" title="LinkedIn company info">3</a>]</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Facebook's-geo-mapped-social-graph">Facebook's geo-mapped social graph<a class="anchor-link" href="#Facebook's-geo-mapped-social-graph">&#182;</a></h1><p><img src="images/fb_graph.jpg" alt="alt text" title="Geo-mapped Facebook graph"></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="OSNs-are-goldmines-for-researchers">OSNs are goldmines for researchers<a class="anchor-link" href="#OSNs-are-goldmines-for-researchers">&#182;</a></h1><p>From tens or hundreds of participants to millions</p>
-<p>Unique opporunity to analyze behavior on a <strong>global scale</strong></p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Milgram's small-world expirement replicated with 721M users and 69B friendships [<a href="http://www.uvm.edu/~pdodds/files/papers/others/1969/travers1969.pdf" title="An experimental study of the small world problem">1</a>, <a href="http://arxiv.org/pdf/1111.4570v3.pdf" title="Four degrees of seperation">2</a>]</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Six-degrees-of-separation">Six-degrees of separation<a class="anchor-link" href="#Six-degrees-of-separation">&#182;</a></h1><p><img src="images/six_degrees.png" alt="alt text" title="Six-degrees of separation"></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Collecting-social-network-data">Collecting social network data<a class="anchor-link" href="#Collecting-social-network-data">&#182;</a></h1><p>A static network dataset includes a snapshop of its</p>
-<ul>
-<li><p><strong>Graph:</strong> Users and their relationships</p>
-</li>
-<li><p><strong>Attributes:</strong> User profiles and contents</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Ways to collect social network data, from easiest to harderst:</p>
-<ul>
-<li><p>Download <strong>publicly available</strong> datasets</p>
-</li>
-<li><p>Use data-access APIs provided by networks</p>
-</li>
-<li><p>Crawl and scrape data from networks "manually"</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-comes-in-different-shapes-&amp;-formats">Data comes in different shapes &amp; formats<a class="anchor-link" href="#Data-comes-in-different-shapes-&amp;-formats">&#182;</a></h1><p>Usually <strong>structured</strong>, with a schema (Pajek, TAB, etc.)</p>
-<ul>
-<li><p>Adjacency list for graphs ( <code>user1, user2</code> )</p>
-</li>
-<li><p>Data matrix for attributes ( <code>male, 26, vancouver, canada, UBC, etc.</code> )</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>But sometimes <strong>semi-structured</strong>, without a schema (JSON, XML, etc.)</p>
-<ul>
-<li><p>Dictionary with attribute names and values ( <code>{"gender":"male", "age":26}</code> )</p>
-</li>
-<li><p>Marked up attributes with attribute tags and values</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Stanford-large-network-dataset-collection-(SNAP)">Stanford large network dataset collection (SNAP)<a class="anchor-link" href="#Stanford-large-network-dataset-collection-(SNAP)">&#182;</a></h1><p>Public datasets for social, communication, citation, collaboration, road, and geo-location networks</p>
-<p>Go to SNAP website <a href="http://snap.stanford.edu/data/index.html">http://snap.stanford.edu/data/index.html</a></p>
-<p>Download Arxiv General Relativity ( <code>ca-GrQc</code> ) collaboration network</p>
-<ul>
-<li><p>Direct link is <a href="http://snap.stanford.edu/data/ca-GrQc.html">http://snap.stanford.edu/data/ca-GrQc.html</a></p>
-</li>
-<li><p>Download compressed file <code>ca-GrQc.txt.gz</code></p>
-</li>
-<li><p>Uncompress the file into <code>~/dev/swi/datasets/ca-GrQc.txt</code></p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Already available to you in the workshop's Github repo!</em></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Setting-up-dev-environment">Setting up dev environment<a class="anchor-link" href="#Setting-up-dev-environment">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installing-Anaconda-Python-distribution">Installing Anaconda Python distribution<a class="anchor-link" href="#Installing-Anaconda-Python-distribution">&#182;</a></h1><p>Go to Continuum Anaconda webpage <a href="http://continuum.io/downloads">http://continuum.io/downloads</a></p>
-<p>Download &amp; install the propoer binary of Python 2.7 Graphical Installer</p>
-<p>Update Anaconda and iPython, then install statsmodels</p>
-<ul>
-<li><p>Use graphical interface (Desktop shortcut)</p>
-</li>
-<li><p>Or from command-line, type</p>
-
-<pre><code>conda update conda
-conda update jupyter
-conda install statsmodels</code></pre>
-</li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Anaconda comes with 224 packages, including Networkx and SciKit-Learn!</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installing-Git-version-control-system">Installing Git version control system<a class="anchor-link" href="#Installing-Git-version-control-system">&#182;</a></h1><p>Go to Git website <a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
-<p>Download and install the proper binary of Git 2.3.0</p>
-<p>Clone the workshop's Git repo from Github using command-line</p>
-
-<pre><code>cd ~/
-mkdir dev
-cd dev
-git clone https://github.com/boshmaf/swi.git</code></pre>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Repository contains all workshop material</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Install-PanDoc-document-convertor">Install PanDoc document convertor<a class="anchor-link" href="#Install-PanDoc-document-convertor">&#182;</a></h1><p>Got to PanDoc website <a href="http://johnmacfarlane.net/pandoc/installing.html">http://johnmacfarlane.net/pandoc/installing.html</a></p>
-<p>Download and install the proper binary of PanDoc 1.13.x</p>
-<p>To view these slides from command-line, type</p>
-
-<pre><code>cd ~/dev/swi
-./start.sh</code></pre>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>This will open a new tab in the browser; use arrow keys to navigate</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="You-can-now-edit-the-slides!">You can now edit the slides!<a class="anchor-link" href="#You-can-now-edit-the-slides!">&#182;</a></h1><p>From command-line, type</p>
-
-<pre><code>cd ~/dev/swi
-jupyter notebook</code></pre>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>This will open a new tab in the browser; click on <code>swi</code> to edit</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Break-I">Break I<a class="anchor-link" href="#Break-I">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Network-analysis-with-Networkx">Network analysis with Networkx<a class="anchor-link" href="#Network-analysis-with-Networkx">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-Networkx?">What is Networkx?<a class="anchor-link" href="#What-is-Networkx?">&#182;</a></h1><p>Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.</p>
-<p>Noticable features</p>
-<ul>
-<li><p>Data structures for graphs, digraphs, and multigraphs</p>
-</li>
-<li><p>Many standard graph algorithms</p>
-</li>
-<li><p>Generators for classic graphs, random graphs, and synthetic networks</p>
-</li>
-<li><p>Nodes can be "anything" (e.g. text, images, XML records)</p>
-</li>
-<li><p>Edges can hold arbitrary data (e.g. weights, time-series)</p>
-</li>
-</ul>
-<p>Go to Networkx website for more info <a href="https://networkx.github.io/">https://networkx.github.io/</a></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Creating-a-graph">Creating a graph<a class="anchor-link" href="#Creating-a-graph">&#182;</a></h1><p>Graph $G=(V,E)$ is collection of nodes $V$ with identified pairs of nodes called edges $E$</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Import Networkx package</span>
-<span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
-
-<span class="c1"># Create empty undirected graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>We will focus only on undirected graphs</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Adding-nodes">Adding nodes<a class="anchor-link" href="#Adding-nodes">&#182;</a></h1><p>In Python, <code>[o1, o2, etc.]</code> is used to group a <strong>mutable list of objects</strong></p>
-<p>Let's add a list of 3 nodes representing social network users Dave, Bob, and Alice</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Add three nodes</span>
-<span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Dave&quot;</span><span class="p">,</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="s2">&quot;Alice&quot;</span><span class="p">]</span> 
-<span class="n">G</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can find number of nodes in the graph by computing its <em>order</em></p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;Number of nodes is:&quot;</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">order</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of nodes is: 3
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Adding-edges">Adding edges<a class="anchor-link" href="#Adding-edges">&#182;</a></h1><p>In Python, <code>(o1, o2, etc.)</code> is used to group an <strong>immutable tuple of objects</strong></p>
-<p>Let's add a list of two friendship tuples between Bob and Dave, and Bob and Alice</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Add edges between nodes</span>
-<span class="n">friendships</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="s2">&quot;Dave&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Alice&quot;</span><span class="p">)]</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">friendships</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can find number of edges in the graph by computing its <em>size</em></p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;Number of edges is:&quot;</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of edges is: 2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Creating-a-graph-from-a-dataset">Creating a graph from a dataset<a class="anchor-link" href="#Creating-a-graph-from-a-dataset">&#182;</a></h1><p>All we need to create a graph is an edge list</p>
-<p>Let's create the Arxiv General Relativity ( <code>ca-GrQc</code> ) graph</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>First, we create an empty graph with no nodes</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Create an empty undirected graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Then we open the dataset file and skip all headers</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Open dataset file for reading</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;datasets/ca-GrQc.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-
-<span class="c1"># Skip the first 4 lines</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
-    <span class="n">dataset</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Finally, we read the dataset line by line and add edges</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Create the graph, edge by edge</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">:</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># Remove whitespace chars</span>
-    <span class="n">nodes</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Split string by tab charater</span>
-    <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    
-<span class="c1"># Close dataset file</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>It's always good to confirm the size and the order by assertion</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">assert</span> <span class="n">G</span><span class="o">.</span><span class="n">order</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5242</span>
-<span class="k">assert</span> <span class="n">G</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">14496</span>
-<span class="k">print</span> <span class="s2">&quot;Graph created successfully from dataset!&quot;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Graph created successfully from dataset!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also use Networkx built-in <code>read_edgelist</code> method</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Open dataset file for reading</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;datasets/ca-GrQc.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-
-<span class="c1"># Skip the first 4 lines</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
-    <span class="n">dataset</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
-    
-<span class="c1"># Create graph from opened dataset file</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">read_edgelist</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
-
-<span class="c1"># Close dataset file</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's confirm the size and the order again</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">assert</span> <span class="n">G</span><span class="o">.</span><span class="n">order</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5242</span>
-<span class="k">assert</span> <span class="n">G</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">14496</span>
-<span class="k">print</span> <span class="s2">&quot;Graph dataset read successfully from file!&quot;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Graph dataset read successfully from file!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Network-analysis:-Connected-components">Network analysis: Connected components<a class="anchor-link" href="#Network-analysis:-Connected-components">&#182;</a></h1><p><em>Is the collaboration network connected?</em></p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;The graph is connected?&quot;</span><span class="p">,</span> <span class="n">nx</span><span class="o">.</span><span class="n">is_connected</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The graph is connected? False
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>How many connected components, or disjoint collaboration subgraph?</em></p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;Number of connected components is:&quot;</span><span class="p">,</span> <span class="n">nx</span><span class="o">.</span><span class="n">number_connected_components</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of connected components is: 355
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>What's the distribution of number of collaborators in each connected component?</em></p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's plot the CDF, but we need to import new packages for this</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Enable plotting in the current Notebook</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-
-<span class="c1"># Import plotting interface</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-
-<span class="c1"># Import stats and numerical packages</span>
-<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="kn">as</span> <span class="nn">sm</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We then get the order of each connected component as a subgraph</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Get connected components as subgraphs</span>
-<span class="n">subgraphs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">connected_component_subgraphs</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
-
-<span class="c1"># Find order of each subgraph</span>
-<span class="n">order_values</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">subgraph</span> <span class="ow">in</span> <span class="n">subgraphs</span><span class="p">:</span>
-    <span class="n">order_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subgraph</span><span class="o">.</span><span class="n">order</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Finally, we plot the CDF of connected components order</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Plot connected components order CDF</span>
-<span class="n">ecdf</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">distributions</span><span class="o">.</span><span class="n">ECDF</span><span class="p">(</span><span class="n">order_values</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">order_values</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">order_values</span><span class="p">))</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">ecdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Order&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;CDF&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-avX/AWTkByp5pCodAAAAAElFTkSuQmCC
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>As the plot is too skewed, we compute helpful summary stats</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Order summary stats</span>
-<span class="k">print</span> <span class="s2">&quot;Min order:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">order_values</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;Max order:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">order_values</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;Mean order:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">order_values</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;Median order:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">order_values</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;90-percentile order:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">order_values</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Min order: 1
-Max order: 4158
-Mean order: 14.7661971831
-Median order: 2.0
-90-percentile order: 5.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Based on this analysis, we focus on the largest connected compoent!</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># User built-in max with custom value function</span>
-<span class="n">G</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">subgraphs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="o">.</span><span class="n">order</span><span class="p">)</span>
-
-<span class="k">print</span> <span class="s2">&quot;Number of nodes:&quot;</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">order</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;Number of edges:&quot;</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of nodes: 4158
-Number of edges: 13428
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Network-analysis:-Connectivity">Network analysis: Connectivity<a class="anchor-link" href="#Network-analysis:-Connectivity">&#182;</a></h1><p><em>What is the maximum number of in-between collaborators among any pair of researchers?</em></p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can find this by computing the <strong>diameter</strong> of the graph: The length of the longest shortest path between any pair of nodes</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;Graph diameter is:&quot;</span><span class="p">,</span> <span class="n">nx</span><span class="o">.</span><span class="n">diameter</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Graph diameter is: 17
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>How likely are the collaborators of a researcher to collaborate themselves, on average?</em></p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can find this by computing the <strong>average clustering coefficient</strong> $C(G)$ of the graph $G$:</p>
-$$ C(G) = \frac{1}{n} \sum_{v_i\in V} c(v_i) $$<p>Where $n$ is number of nodes and $c(v_i)$ is the <em>clustering coefficient</em> of node $v_i$, defined by</p>
-$$ c(v_i) = \frac{2T(v_i)}{\deg(v_i)(\deg(v_i)-1)} $$<p>Where $T(v_i)$ is the numer of <em>triangles</em> through node $v_i$ and $\deg(v_i)$ is the <em>degree</em> of $v_i$, which is number of edges incident to $v_i$</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;Average clustering coefficient is:&quot;</span><span class="p">,</span> <span class="n">nx</span><span class="o">.</span><span class="n">average_clustering</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Average clustering coefficient is: 0.55687821617
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>How dense is the collaboration, or how close it is to "everyone is collaborating with everyone else"?</em></p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can find this by computing the <strong>density</strong> $D(G)$ of the graph, defined by</p>
-$$ D(G) = \frac{2m}{n(n-1)} $$<p>where $m$ is number of edges</p>
-<p>For a complete graph that is fully-connected, $m=n(n-1)/2$ so $D(G)=1$</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;Graph density:&quot;</span><span class="p">,</span> <span class="n">nx</span><span class="o">.</span><span class="n">density</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Graph density: 0.00155373453425
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Network-analysis:-Degree-centrality">Network analysis: Degree centrality<a class="anchor-link" href="#Network-analysis:-Degree-centrality">&#182;</a></h1><p><em>Who are the most collaborative researchers?</em></p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We find this by computing the degree <strong>centrality</strong> $c(v_i)$ of each node $v_i$: The fraction of nodes it is connected to, formally</p>
-$$ c(v_i) = \frac{\deg(v_i)}{n-1} $$
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Compute degree centrality of nodes</span>
-<span class="n">deg_centrality</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">degree_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We then sort the nodes by their degree centrality and find top-5 nodes</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Impost useful operators for sorting</span>
-<span class="kn">import</span> <span class="nn">operator</span>
-
-<span class="c1"># Sort nodes by their degree centrality</span>
-<span class="n">top_nodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">deg_centrality</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-<span class="c1"># Print top-5 nodes</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s2">&quot;Rank:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;with ID&quot;</span><span class="p">,</span> <span class="n">top_nodes</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Rank: 1 with ID 21012
-Rank: 2 with ID 21281
-Rank: 3 with ID 22691
-Rank: 4 with ID 12365
-Rank: 5 with ID 6610
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>What is the collaboration distribution among researchers?</em></p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To find this, we plot the degree distribution of the graph</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Get degrees of all nodes</span>
-<span class="n">degree_values</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
-
-<span class="c1"># Plot degree CDF</span>
-<span class="n">ecdf</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">distributions</span><span class="o">.</span><span class="n">ECDF</span><span class="p">(</span><span class="n">degree_values</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">degree_values</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">degree_values</span><span class="p">))</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">ecdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Degree&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;CDF&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-RU5ErkJggg==
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Only 10% of researchers have at least 15 collaborators</p>
-<ul>
-<li><p>Concentrated distrubtion, power-law?</p>
-</li>
-<li><p>We can compute helpful summary stats to elaborate</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Degree summary stats</span>
-<span class="k">print</span> <span class="s2">&quot;Min degree:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">degree_values</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;Max degree:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">degree_values</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;Mean degree:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">degree_values</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;Median degree:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">degree_values</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;90-percentile degree:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">degree_values</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Min degree: 1
-Max degree: 81
-Mean degree: 6.45887445887
-Median degree: 3.0
-90-percentile degree: 15.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Sampling-a-graph">Sampling a graph<a class="anchor-link" href="#Sampling-a-graph">&#182;</a></h1><p>If the graph is too large, we need to sample it</p>
-<p>Ideally, the sampled graph should exhibit the same properties as the original</p>
-<p>There are many ways to sample, most popular are [<a href="http://cs.stanford.edu/people/jure/pubs/sampling-kdd06.pdf" title="Sampling from large graphs">1</a>]</p>
-<ul>
-<li><p>Breadth-first search (BFS) or depth-first search (DFS)</p>
-</li>
-<li><p>Random walk and forest first</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>See animation of BFS sampling algorithm <a href="https://www.cs.usfca.edu/~galles/visualization/BFS.html">https://www.cs.usfca.edu/~galles/visualization/BFS.html</a></p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Okay, let's sample 30 nodes from the graph using BFS</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Import utility functions</span>
-<span class="kn">import</span> <span class="nn">utils</span>
-
-<span class="c1"># Sample a 30-node subgraph using BFS</span>
-<span class="n">H</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">bfs_sample</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>It is good to confirm the sampled graph is indeed smaller and connected</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;Number of nodes:&quot;</span><span class="p">,</span> <span class="n">H</span><span class="o">.</span><span class="n">order</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;Number of edges:&quot;</span><span class="p">,</span> <span class="n">H</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;Is connected?&quot;</span><span class="p">,</span> <span class="n">nx</span><span class="o">.</span><span class="n">is_connected</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of nodes: 30
-Number of edges: 29
-Is connected? True
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Visualizing-a-graph">Visualizing a graph<a class="anchor-link" href="#Visualizing-a-graph">&#182;</a></h1><p>Let's visualize the graph sample instead of the whole graph</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Visualize the sampled graph</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
-
-<span class="c1"># Show the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Break-II">Break II<a class="anchor-link" href="#Break-II">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Machine-learning-with-SciKit-Learn">Machine learning with SciKit-Learn<a class="anchor-link" href="#Machine-learning-with-SciKit-Learn">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-SciKit-Learn?">What is SciKit-Learn?<a class="anchor-link" href="#What-is-SciKit-Learn?">&#182;</a></h1><p>Python package for machine learning</p>
-<p>Noticable features</p>
-<ul>
-<li><p>Simple and efficient tools for data mining and data analysis</p>
-</li>
-<li><p>Accessible to everybody, and reusable in various contexts</p>
-</li>
-<li><p>Built on top of NumPy, SciPy, and MatPlotLib</p>
-</li>
-</ul>
-<p>Go to SciKit-Learn website for more info <a href="http://scikit-learn.org/stable/index.html">http://scikit-learn.org/stable/index.html</a></p>
+More notebooks? Go to <a href="https://github.com/boshmaf/notebooks">github.com/boshmaf/notebooks</a></p>
+<p>Last updated: February 11, 2016</p>
 
 </div>
 </div>
@@ -2523,12 +281,9 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For example,</p>
 <ul>
-<li><p>User Bob has the following feature vector: $($1, "Bob", 24, "USA", "Male"$)$</p>
-</li>
-<li><p>User Alice has the following feature vector: $($2, "Alice", 20, "Canada", "Female"$)$</p>
-</li>
-<li><p>So 1st feature is ID, 2nd is name, 3rd is age, 4th is nationality, 5th is gender</p>
-</li>
+<li>User Bob has the following feature vector: $($1, "Bob", 24, "USA", "Male"$)$</li>
+<li>User Alice has the following feature vector: $($2, "Alice", 20, "Canada", "Female"$)$</li>
+<li>So 1st feature is ID, 2nd is name, 3rd is age, 4th is nationality, 5th is gender</li>
 </ul>
 
 </div>
@@ -2549,18 +304,13 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-machine-learning?">What is machine learning?<a class="anchor-link" href="#What-is-machine-learning?">&#182;</a></h1><p>We will focus on <strong>supervised</strong> learning problems</p>
+<h1 id="Supervised-machine-learning?">Supervised machine learning?<a class="anchor-link" href="#Supervised-machine-learning?">&#182;</a></h1><p>We will focus on <strong>supervised</strong> learning problems</p>
 <ul>
-<li><p>Feature vectors have at least one feature that we want to predict</p>
-</li>
-<li><p>This feature is called the <strong>target variable</strong> (e.g., gender)</p>
-</li>
-<li><p>Subset of feature vectors already have target values, called <strong>training dataset</strong></p>
-</li>
-<li><p>The rest we want to predict their target values, called <strong>testing or new dataset</strong></p>
-</li>
-<li><p>Goal is to predict "accurately with minimal errors" using a machine learning <strong>algorithm</strong></p>
-</li>
+<li>Feature vectors have at least one feature that we want to predict</li>
+<li>This feature is called the <strong>target variable</strong> (e.g., gender)</li>
+<li>Subset of feature vectors already have target values, called <strong>training dataset</strong></li>
+<li>The rest we want to predict their target values, called <strong>testing or new dataset</strong></li>
+<li>Goal is to predict "accurately with minimal errors" using a machine learning <strong>algorithm</strong></li>
 </ul>
 
 </div>
@@ -2591,7 +341,24 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/supervised_ML.png" alt="alt txt" title="Supervised machine learning"></p>
+<p><img src="images/supervised_learning.png" alt="alt txt" title="Supervised machine learning"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-SciKit-Learn?">What is SciKit-Learn?<a class="anchor-link" href="#What-is-SciKit-Learn?">&#182;</a></h1><p>Python package for machine learning</p>
+<p>Noticable features</p>
+<ul>
+<li>Simple and efficient tools for data mining and data analysis</li>
+<li>Accessible to everybody, and reusable in various contexts</li>
+<li>Built on top of NumPy, SciPy, and MatPlotLib</li>
+</ul>
+<p>Go to SciKit-Learn website for more info <a href="http://scikit-learn.org/stable/index.html">scikit-learn.org/stable/index.html</a></p>
 
 </div>
 </div>
@@ -2611,13 +378,11 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Go to the US Social Security website <a href="http://www.ssa.gov/oact/babynames/limits.html">http://www.ssa.gov/oact/babynames/limits.html</a></p>
+<p>Go to the US Social Security website <a href="http://www.ssa.gov/oact/babynames/limits.html">ssa.gov/oact/babynames/limits.html</a></p>
 <p>Download the national popular baby names dataset, called <code>names.zip</code></p>
 <ul>
-<li><p>Click on "National data"</p>
-</li>
-<li><p>Uncompress the datasets a into datasets directory</p>
-</li>
+<li>Click on "National data"</li>
+<li>Uncompress the datasets a into datasets directory</li>
 </ul>
 
 </div>
@@ -2628,7 +393,7 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>It's already available to you in the workshop repo!</em></p>
+<p><em>It's already available to you in the notebook's repo!</em></p>
 
 </div>
 </div>
@@ -2645,14 +410,18 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Useful file pattern package</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># Ignore those annoying warnings ;-)</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Useful file pattern package</span>
 <span class="kn">import</span> <span class="nn">glob</span>
 
 <span class="c1"># Get a list of file names in dataset directory</span>
-<span class="n">file_names</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;datasets/names/*.txt&quot;</span><span class="p">)</span>
+<span class="n">file_names</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;datasets/*.txt&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2672,7 +441,7 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Open files and merge data</span>
@@ -2709,7 +478,7 @@ KmP4EhERqYzhS0REpLL/B7v1iwBi3/CQAAAAAElFTkSuQmCC
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s2">&quot;Number of names:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
@@ -2757,7 +526,7 @@ Its female count: 18
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Compute ratio of unisex names in dataset</span>
@@ -2798,10 +567,8 @@ Ratio is dataset: 10.90%
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can use gender count to label names as female or not</p>
 <ul>
-<li><p>Let $C_m(n_i)$ be count of males with name $n_i$</p>
-</li>
-<li><p>Similarly, let $C_f(n_i)$ be the count of females with name $n_i$</p>
-</li>
+<li>Let $C_m(n_i)$ be count of males with name $n_i$</li>
+<li>Similarly, let $C_f(n_i)$ be the count of females with name $n_i$</li>
 </ul>
 <p>Now, let a label $\ell(n_i)=1$ means the name $n_i$ <strong>corresponds to a female</strong>, as defined by</p>
 $$
@@ -2816,7 +583,7 @@ $$<p>Accordingly, Kinsler should be labelled as a male with target value of 0, l
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Assign labels to names in dataset</span>
@@ -2865,7 +632,7 @@ Ratio is dataset: 63.47%
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">name</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">100</span><span class="p">]</span>
@@ -2920,12 +687,9 @@ Its gender is: Male
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For latin or western names, one can look at</p>
 <ul>
-<li><p>The last letter</p>
-</li>
-<li><p>The last two letter</p>
-</li>
-<li><p>Whether the last letter is a vowel</p>
-</li>
+<li>The last letter</li>
+<li>The last two letter</li>
+<li>Whether the last letter is a vowel</li>
 </ul>
 <p><em>Example: Philipp vs. Philippa</em></p>
 
@@ -2944,7 +708,7 @@ Its gender is: Male
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Extract features from names</span>
@@ -2974,7 +738,7 @@ Its gender is: Male
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">name</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">100</span><span class="p">]</span>
@@ -3028,10 +792,8 @@ Label is: 0
 <h1 id="Vectorizing-the-labelled-dataset">Vectorizing the labelled dataset<a class="anchor-link" href="#Vectorizing-the-labelled-dataset">&#182;</a></h1><p>We need to convert the dataset from feature-value format to vectors</p>
 <p>For categorical features, we can do <strong>binary one-of-K</strong> coding</p>
 <ul>
-<li><p>A binary feature is constructed for each of possible string values a feature can take</p>
-</li>
-<li><p>So <code>last_letter</code> feature results in up to 26 features</p>
-</li>
+<li>A binary feature is constructed for each of possible string values a feature can take</li>
+<li>So <code>last_letter</code> feature results in up to 26 features</li>
 </ul>
 <p><em>Example, <code>last_letter=a</code>, <code>last_letter=b</code>, etc.</em></p>
 
@@ -3040,7 +802,7 @@ Label is: 0
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Dictionary vectorizer from SciKit-Learn package</span>
@@ -3067,7 +829,7 @@ Label is: 0
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Get feature names and label index</span>
@@ -3109,7 +871,7 @@ Label is: 0
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Split labelled vectors into labels and vectors</span>
@@ -3156,7 +918,7 @@ Label is: 0
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Validate dimensions</span>
@@ -3255,10 +1017,8 @@ $$<p>We can use Maximum A Posteriori (MAP) estimation to estimate $P(y)$ and $P(
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Different assumptions regarding the distribution of $P(x_i~|~y)$ lead to different classifiers</p>
 <ul>
-<li><p>We assume data is distributed according to multivariate Bernoulli distributions</p>
-</li>
-<li><p>Meaing there may be multiple features but each one is assumed to be a binary-valued</p>
-</li>
+<li>We assume data is distributed according to multivariate Bernoulli distributions</li>
+<li>Meaing there may be multiple features but each one is assumed to be a binary-valued</li>
 </ul>
 <p>The decision rule for <strong>Bernoulli naive Bayes</strong> is based on</p>
 $$
@@ -3279,7 +1039,7 @@ $$
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Import shuffle method</span>
@@ -3307,7 +1067,7 @@ $$
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Split data</span>
@@ -3336,7 +1096,7 @@ $$
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">assert</span> <span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
@@ -3381,7 +1141,7 @@ $$
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Import the classifier</span>
@@ -3444,7 +1204,7 @@ $$
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Predict labels of unseen data</span>
@@ -3468,7 +1228,7 @@ $$
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Import testing metrics</span>
@@ -3504,10 +1264,8 @@ $$
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's compute the accuracy of the classification problem as a whole</p>
 <ul>
-<li><p>We compute the <strong>confusion matrix</strong>, which tells us true positives, true negatives, etc.</p>
-</li>
-<li><p>We can visually plot it too</p>
-</li>
+<li>We compute the <strong>confusion matrix</strong>, which tells us true positives, true negatives, etc.</li>
+<li>We can visually plot it too</li>
 </ul>
 
 </div>
@@ -3515,10 +1273,16 @@ $$
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Import testing metrics</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># Enable plotting in the current Notebook</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># Import plotting interface</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Import testing metrics</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
 
 <span class="n">conf_matrix</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predicted</span><span class="p">)</span>
@@ -3543,102 +1307,102 @@ $$
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -3671,10 +1435,10 @@ XmPlS1lOFmaWxfeGmFkWJwszy+JkYWZZnCzMLIuThZll+X8ldHaoL+7xowAAAABJRU5ErkJggg==
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Import helper function from utils</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># Import helper functions from utils</span>
 <span class="kn">import</span> <span class="nn">utils</span>
 
 <span class="c1"># Get feature vector from name</span>
@@ -3719,54 +1483,9 @@ XmPlS1lOFmaWxfeGmFkWJwszy+JkYWZZnCzMLIuThZll+X8ldHaoL+7xowAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Break-III">Break III<a class="anchor-link" href="#Break-III">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Final-remarks">Final remarks<a class="anchor-link" href="#Final-remarks">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="We-just-scratched-the-surface!">We just scratched the surface!<a class="anchor-link" href="#We-just-scratched-the-surface!">&#182;</a></h1><p>Social web intelligence gets more technical with big data [<a href="https://www.coursera.org/course/bigdata" title="Web intelligence and big data">1</a>]</p>
-<p>More interesting research has been a <strong>collaboration</strong> between</p>
-<ul>
-<li><p>Computer scientists: Deal with big data problems</p>
-</li>
-<li><p>Statisticians: Develop statistical inference models</p>
-</li>
-<li><p>Social scientists: Ground the research, answer the "why?"</p>
-</li>
-</ul>
+<h1 id="Questions?-Issues?">Questions? Issues?<a class="anchor-link" href="#Questions?-Issues?">&#182;</a></h1><p>Tweet your question to <a href="https://twitter.com/boshmaf">twitter.com/boshmaf</a> and I'll get back to you</p>
+<p>Best way to fix any issue is to open one at <a href="https://github.com/boshmaf/notebooks">github.com/boshmaf/notebooks</a></p>
 
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Feel free to email me at <a href="mailto:boshmaf@ece.ubc.ca">boshmaf@ece.ubc.ca</a></em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Questions,-please?">Questions, please?<a class="anchor-link" href="#Questions,-please?">&#182;</a></h1>
 </div>
 </div>
 </div></section></section>

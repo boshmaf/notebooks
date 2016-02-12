@@ -1,4 +1,4 @@
-# Notebooks
+# [Notebooks](http://boshmaf.github.io/notebooks)
 A collections of hands-on tutorials on interesting, multi-disciplinary topics in computer technology.
 
 Have been here before? Go straight to Jupyter [index](http://nbviewer.jupyter.org/github/boshmaf/notebooks/tree/master).
@@ -13,6 +13,7 @@ This is the tutorial to start them all.
 [ [Read](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/graph-analysis/notebook.ipynb) |  [Present](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/graph-analysis/notebook.ipynb) ]
 Exploring properties of connected entities and their relationships.
 
-## [Social Web Intelligence (SWI)](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/swi/swi.ipynb)
+## [Machine Learning with SciKit-Learn](https://github.com/boshmaf/notebooks/tree/master/machine-learning)
 
-Learn how to use free tools and data to answer meaningful questions about user behavior.
+[ [Read](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/machine-learning/notebook.ipynb) |  [Present](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/machine-learning/notebook.ipynb) ]
+Training a machine to classify things into categories with high accuracy
