@@ -474,7 +474,7 @@ wav_file.close()</code></pre>
 <h3 id="3.-Physics-of-sound">3. Physics of sound<a class="anchor-link" href="#3.-Physics-of-sound">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section></section><section><section>Hello</section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -518,7 +518,7 @@ To generate a note at a certain pitch, we need to store the soundwave's value at
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">WAVELENGTH</span> <span class="o">=</span> <span class="n">FRAMERATE</span> <span class="o">/</span> <span class="mi">440</span>
@@ -578,7 +578,7 @@ wav_file.close()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">class</span> <span class="nc">Note</span><span class="p">():</span>
@@ -605,7 +605,7 @@ wav_file.close()</code></pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">class</span> <span class="nc">Sequence</span><span class="p">():</span>
@@ -638,7 +638,7 @@ wav_file.close()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">doremi</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">()</span>
@@ -664,7 +664,7 @@ wav_file.close()</code></pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">sound</span>
@@ -688,6 +688,83 @@ wav_file.close()</code></pre>
 <span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;D4&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">twinkle</span><span class="o">.</span><span class="n">addNote</span><span class="p">(</span><span class="s">&#39;C4&#39;</span><span class="p">,</span> <span class="n">b</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">twinkle</span><span class="o">.</span><span class="n">writeWav</span><span class="p">(</span><span class="s">&#39;output/twinkle&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">nb_embed</span>
+<span class="n">nb_embed</span><span class="o">.</span><span class="n">html</span><span class="p">(</span><span class="s">&#39;&#39;&#39;</span>
+<span class="s">&lt;table&gt;</span>
+<span class="s">    &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;/tr&gt;</span>
+<span class="s">    &lt;tr&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;/tr&gt;</span>
+<span class="s">&lt;/table&gt;</span>
+<span class="s">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="width: auto;"><a id='js_code_01' href='#' style="display: block; background: rgb(200, 200, 200);">Show Code</a>
+        <script>
+        $(document).ready(function(){
+           var toggleButton = $('#js_code_01')
+           var codeDiv = toggleButton.closest('.output_wrapper').prevAll()[1];
+           toggleButton.on('click', function(){
+              $(codeDiv).toggle();
+           });
+           $(codeDiv).hide();
+        });
+        </script><div style="width: auto; border: 1px solid rgb(200, 200, 200); padding: 1em;">
+<table>
+    <tr><td>1</td><td>0</td></tr>
+    <tr><td>0</td><td>1</td></tr>
+</table>
+</div></div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</aside>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre> 
 </pre></div>
 
 </div>
