@@ -1,6 +1,12 @@
 import random
 from IPython.display import HTML
 
+""" usage:
+    
+import nb_embed
+nb_embed.html('<p>Hello World</p>')
+"""
+
 def randname(length=4):
     return ''.join([random.choice('abcdefghijklmnopqrstuvwxyz0123456789') for i in range(0, length)])
 
