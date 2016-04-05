@@ -1,6 +1,7 @@
-# Audio-wave
+## Audio-wave
+### Exploring Sound Generation with Python wave module
 
-Have you ever stopped and wondered how a computer is able to play a sound file or how we are able to record and store sounds?
+Have you ever wondered how a computer is able to play a sound file or how we are able to record and store sound?
 How does a sequence of zeroes and ones get converted into physical sound that come out through the speakers?
 How are all these real-life analogue sound saved as zeroes and ones?
 
