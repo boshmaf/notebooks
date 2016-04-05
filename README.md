@@ -16,4 +16,9 @@ Exploring properties of connected entities and their relationships.
 ## [Machine Learning with SciKit-Learn](https://github.com/boshmaf/notebooks/tree/master/machine-learning)
 
 [ [Read](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/machine-learning/notebook.ipynb) |  [Present](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/machine-learning/notebook.ipynb) ]
-Training a machine to classify things into categories with high accuracy
+Training a machine to classify things into categories with high accuracy.
+
+## [Sound Generation with Python wave](https://github.com/boshmaf/notebooks/tree/master/audio-wave)
+
+[ [Read](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/audio-wave/notebook.ipynb) | [Present](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/audio-wave/notebook.ipynb) ]
+Exploring the physics of sound and learning how the information is stored digitally inside a raw WAV file.
