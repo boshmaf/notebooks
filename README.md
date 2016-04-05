@@ -20,5 +20,5 @@ Training a machine to classify things into categories with high accuracy.
 
 ## [Sound Generation with Python wave](https://github.com/boshmaf/notebooks/tree/master/audio-wave)
 
-[_[Read](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/audio-wave/notebook.ipynb) | [Present](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/audio-wave/notebook.ipynb) ]
+[ [Read](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/audio-wave/notebook.ipynb) | [Present](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/audio-wave/notebook.ipynb) ]
 Exploring the physics of sound and learning how the information is stored digitally inside a raw WAV file.
