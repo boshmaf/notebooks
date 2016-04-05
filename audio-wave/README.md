@@ -9,6 +9,6 @@ In this notebook, we will explore the physics of sound and how the information i
 
 **Estimated time to finish: 15-30 minutes.**
 
-To **read** the notebook, please click [here](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/wave/audio-wave/notebook.ipynb). 
+To **read** the notebook, please click [here](http://nbviewer.ipython.org/github/boshmaf/notebooks/blob/master/audio-wave/notebook.ipynb). 
 
-To **present** the notebook, click over [here](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/wave/audio-wave/notebook.ipynb).
+To **present** the notebook, click over [here](http://nbviewer.jupyter.org/format/slides/github/boshmaf/notebooks/blob/master/audio-wave/notebook.ipynb).
